@@ -1,0 +1,16 @@
+(module BELFUSE1A (layer F.Cu) (tedit 0)
+  (fp_text reference F1 (at 0 0) (layer F.SilkS) hide
+    (effects (font (size 1.27 1.27) (thickness 0.15)))
+  )
+  (fp_text value BEL1AFUSE (at 0 0) (layer F.SilkS) hide
+    (effects (font (size 1.27 1.27) (thickness 0.15)))
+  )
+  (fp_line (start 0 0) (end 4 0) (layer F.SilkS) (width 0.127))
+  (fp_line (start 4 0) (end 4 -8.4) (layer F.SilkS) (width 0.127))
+  (fp_line (start 4 -8.4) (end 0 -8.4) (layer F.SilkS) (width 0.127))
+  (fp_line (start 0 -8.4) (end 0 0) (layer F.SilkS) (width 0.127))
+  (pad IN thru_hole circle (at 2 -1.66) (size 1.9304 1.9304) (drill 1) (layers *.Cu *.Mask)
+    (solder_mask_margin 0.1016))
+  (pad OUT thru_hole circle (at 2 -6.74) (size 1.9304 1.9304) (drill 1) (layers *.Cu *.Mask)
+    (solder_mask_margin 0.1016))
+)

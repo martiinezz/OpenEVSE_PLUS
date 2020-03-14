@@ -2019,4 +2019,169 @@ F 3 "~" H 8900 7300 50  0001 C CNN
 	1    8900 7300
 	0    1    1    0   
 $EndComp
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J1
+U 1 1 5E9C1292
+P 6950 6050
+F 0 "J1" H 7000 6275 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 7000 6276 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical" H 6950 6050 50  0001 C CNN
+F 3 "~" H 6950 6050 50  0001 C CNN
+	1    6950 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 5950 6350 5950
+Wire Wire Line
+	6750 6050 6350 6050
+Wire Wire Line
+	6750 6150 6350 6150
+Wire Wire Line
+	6750 6250 6350 6250
+Wire Wire Line
+	7250 6150 7750 6150
+Wire Wire Line
+	7250 6050 7750 6050
+Wire Wire Line
+	7250 5950 7750 5950
+Text Label 6500 5950 0    50   ~ 0
+GND
+Text Label 6500 6050 0    50   ~ 0
+GPIO2
+Text Label 6500 6150 0    50   ~ 0
+GPIO0
+Text Label 7300 6250 0    50   ~ 0
+3-3v
+Text Label 7300 6150 0    50   ~ 0
+RST
+Text Label 7300 6050 0    50   ~ 0
+CH_PD
+$Comp
+L Device:R R22
+U 1 1 5EA427A3
+P 7900 6050
+F 0 "R22" V 8000 6050 50  0000 C CNN
+F 1 "10k" V 7900 6050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7830 6050 50  0001 C CNN
+F 3 "~" H 7900 6050 50  0001 C CNN
+	1    7900 6050
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	8050 6050 8050 6250
+Wire Wire Line
+	7250 6250 8050 6250
+$Comp
+L Regulator_Linear:SPX3819M5-L-3-3 U1
+U 1 1 5EA6F4AB
+P 6550 6850
+F 0 "U1" H 6550 7192 50  0000 C CNN
+F 1 "SPX3819M5-L-3-3" H 6550 7101 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 6550 7175 50  0001 C CNN
+F 3 "https://www.exar.com/content/document.ashx?id=22106&languageid=1033&type=Datasheet&partnumber=SPX3819&filename=SPX3819.pdf&part=SPX3819" H 6550 6850 50  0001 C CNN
+	1    6550 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L OpenEVSE_PLUS_v4-eagle-import:GND #GND02
+U 1 1 5EAA932D
+P 6550 7250
+F 0 "#GND02" H 6550 7250 50  0001 C CNN
+F 1 "GND" H 6550 7129 59  0000 C CNN
+F 2 "" H 6550 7250 50  0001 C CNN
+F 3 "" H 6550 7250 50  0001 C CNN
+	1    6550 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 6750 6250 6850
+Wire Wire Line
+	6250 6750 6000 6750
+Connection ~ 6250 6750
+Text Label 6050 6750 0    50   ~ 0
++5V
+Wire Wire Line
+	6850 6750 7050 6750
+$Comp
+L Device:CP_Small C15
+U 1 1 5EADECF9
+P 7050 6850
+F 0 "C15" H 7138 6896 50  0000 L CNN
+F 1 "100uF" H 7138 6805 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 7050 6850 50  0001 C CNN
+F 3 "~" H 7050 6850 50  0001 C CNN
+	1    7050 6850
+	1    0    0    -1  
+$EndComp
+Connection ~ 7050 6750
+Wire Wire Line
+	7050 6750 7400 6750
+$Comp
+L OpenEVSE_PLUS_v4-eagle-import:GND #GND018
+U 1 1 5EADF2EA
+P 7050 7050
+F 0 "#GND018" H 7050 7050 50  0001 C CNN
+F 1 "GND" H 7050 6929 59  0000 C CNN
+F 2 "" H 7050 7050 50  0001 C CNN
+F 3 "" H 7050 7050 50  0001 C CNN
+	1    7050 7050
+	1    0    0    -1  
+$EndComp
+Text Label 7150 6750 0    50   ~ 0
+3-3v
+$Comp
+L Regulator_Linear:AMS1117-5.0 U2
+U 1 1 5EAECFA7
+P 2300 6950
+F 0 "U2" H 2300 7192 50  0000 C CNN
+F 1 "AMS1117-5.0" H 2300 7101 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2300 7150 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 2400 6700 50  0001 C CNN
+	1    2300 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 6950 1550 6950
+Wire Wire Line
+	2600 6950 2750 6950
+$Comp
+L Device:C C16
+U 1 1 5EB1013C
+P 2750 7100
+F 0 "C16" H 2865 7146 50  0000 L CNN
+F 1 "22uF" H 2865 7055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2788 6950 50  0001 C CNN
+F 3 "~" H 2750 7100 50  0001 C CNN
+	1    2750 7100
+	1    0    0    -1  
+$EndComp
+Connection ~ 2750 6950
+Wire Wire Line
+	2750 6950 3150 6950
+$Comp
+L OpenEVSE_PLUS_v4-eagle-import:GND #GND030
+U 1 1 5EB10B21
+P 2750 7350
+F 0 "#GND030" H 2750 7350 50  0001 C CNN
+F 1 "GND" H 2750 7229 59  0000 C CNN
+F 2 "" H 2750 7350 50  0001 C CNN
+F 3 "" H 2750 7350 50  0001 C CNN
+	1    2750 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L OpenEVSE_PLUS_v4-eagle-import:GND #GND020
+U 1 1 5EB11263
+P 2300 7350
+F 0 "#GND020" H 2300 7350 50  0001 C CNN
+F 1 "GND" H 2300 7229 59  0000 C CNN
+F 2 "" H 2300 7350 50  0001 C CNN
+F 3 "" H 2300 7350 50  0001 C CNN
+	1    2300 7350
+	1    0    0    -1  
+$EndComp
+Text Label 1650 6950 0    50   ~ 0
++12V
+Text Label 2900 6950 0    50   ~ 0
++5V
 $EndSCHEMATC
